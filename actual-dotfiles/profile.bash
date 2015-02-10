@@ -25,8 +25,6 @@ git-on-branch () {
 
 alias vesh="cd ~/vagrant-environment/apangea; vagrant ssh"
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-
 shopt -s extglob
 
 function aalias {
