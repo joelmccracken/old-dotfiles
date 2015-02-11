@@ -1,5 +1,6 @@
-alias up='vagrant up'
 alias vssh='vagrant ssh'
 alias rc='../vmrun.sh bundle exec rails c'
 alias vr='vagrant reload'
 alias vh='vagrant halt'
+alias tvm='/Users/joel/vagrant-environment/vmrun.sh'
+alias vu='vagrant up'
