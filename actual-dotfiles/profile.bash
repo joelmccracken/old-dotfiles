@@ -27,6 +27,8 @@ alias vesh="cd ~/vagrant-environment/apangea; vagrant ssh"
 
 shopt -s extglob
 
+ssh-add `ls ~/var/secrets/id_rsa* | grep -v .pub` > /dev/null 2>&1
+
 function aalias {
     mkdir -p ~/.bash_it/custom/
     echo "alias ${1}='${@:2}'" >> ~/.bash_it/custom/aliases.bash
@@ -39,6 +41,8 @@ function on-branch {
         bash && \
         git checkout $original_branch
 }
+
+
 
 
 function alerts_prompt {
