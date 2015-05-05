@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-export PATH="/usr/local/bin:$PATH"
+export PATH=/usr/local/bin:$PATH
 # add emacs
 export PATH=/Applications/Emacs.app/Contents/MacOS:$PATH
 # add emacsclient, etc
@@ -7,7 +7,9 @@ export PATH=/Applications/Emacs.app/Contents/MacOS/bin:$PATH
 export PATH=/usr/local/bin:$PATH
 export PATH=~/bin:$PATH
 export PATH=/usr/local/bin:$PATH
-export PATH="$HOME/.cabal/bin:$PATH"
+export PATH=$HOME/.cabal/bin:$PATH
+
+export PATH="/opt/homebrew-cask/Caskroom/racket/6.1.1/Racket\ v6.1.1/bin/raco:$PATH"
 
 # export PATH="/usr/local/Cellar/ruby20/2.0.0-p481/bin:$PATH"
 
@@ -59,3 +61,7 @@ function jnm_prompt_command {
 PROMPT_COMMAND=jnm_prompt_command;
 
 function save(){ echo "$@" >> ~/var/saved_commands; }
+
+export HISTCONTROL=erasedups
+export HISTSIZE=10000
+shopt -s histappend
