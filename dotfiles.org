@@ -24,7 +24,7 @@
 * Project Infrastructure
   This project requires lots of meta-infrastructure that is not
   related to my day-to-day computer usage. See the file
-  [[supporting-infrastructure.org]] for the details of all of this.
+  [[file:supporting-infrastructure.org][supporting infrastructure]] for the details of all of this.
   Highlights include:
   - Creating a Mavericks VM for testing
 * Installation and Setup
