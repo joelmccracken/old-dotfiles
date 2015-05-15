@@ -98,6 +98,20 @@ go anywhere, and can thus be specified via the environment variable
    It should now be moved to its final destination in ~\~/var/secrets~.
 
 * Things that need to be done
+** break this huge project into phases/pieces
+
+Restore existing backup functionality
+Restore rsync
+Restore gem backup
+
+Clean up integration test code things. It's all broken. :(
+
+Figure out home git directory.
+- first use separate.
+Move to unifying later
+
+- try vault for storing secrets https://vaultproject.io/community.html
+
 ** necessary
 *** TODO install GPG
 *** TODO write backup script
