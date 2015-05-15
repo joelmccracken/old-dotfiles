@@ -16,6 +16,8 @@ export PATH="/opt/homebrew-cask/Caskroom/racket/6.1.1/Racket\ v6.1.1/bin/raco:$P
 export GIT_EDITOR='emacsclient -s server'
 export EDITOR=$GIT_EDITOR
 
+
+
 git-on-branch () {
     git stash
     ORIGINAL_BRANCH=`git branch | grep \* | sed 's/\*[[:space:]]//'`
@@ -44,9 +46,6 @@ function on-branch {
         git checkout $original_branch
 }
 
-
-
-
 function alerts_prompt {
     cat ~/var/alerts/number
 }
@@ -65,3 +64,4 @@ function save(){ echo "$@" >> ~/var/saved_commands; }
 export HISTCONTROL=erasedups
 export HISTSIZE=10000
 shopt -s histappend
+
