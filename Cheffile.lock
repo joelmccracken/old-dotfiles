@@ -1,8 +1,10 @@
 SITE
   remote: https://supermarket.getchef.com/api/v1
   specs:
+    build-essential (2.2.3)
     dmg (2.2.2)
-    homebrew (1.9.2)
+    homebrew (1.12.0)
+      build-essential (>= 2.1.2)
 
 GIT
   remote: https://github.com/pivotal-sprout/osx
@@ -30,9 +32,9 @@ GIT
 GIT
   remote: https://github.com/pivotal-sprout/sprout-homebrew
   ref: master
-  sha: c865c801f574a904f64aeae4beadd0d3a20be7c8
+  sha: 69aab9a5a4b07535cc903e1db97a8099c4f1d3f6
   specs:
-    sprout-homebrew (0.1.0)
+    sprout-homebrew (0.2.0)
       homebrew (>= 1.5.4)
 
 GIT
