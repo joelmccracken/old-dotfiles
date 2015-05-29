@@ -117,6 +117,7 @@ Move to unifying later
 *** TODO write backup script
 **** should send to s3
 ** Nice-to-have
+*** use keychain for mac sensitive stuffs
 *** TODO add tests for:
 **** Firefox (esp connect to mozrepl, etc)
 **** standard ruby installation
