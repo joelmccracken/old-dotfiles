@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 stopped_sha = File.read(".git/rebase-merge/stopped-sha").strip
-commit_message = `git log -n 1 --pretty=%B #{stopped_sha}`.gsub(/"/, '')
+commit_message = `git log -n 1 --pretty=%B #{stopped_sha}`.gsub(/'/, '')
 
 puts "using commit #{stopped_sha}"
 puts "using message #{commit_message}"
@@ -22,5 +22,5 @@ files.each do |file|
   `git add #{file}`
   msg = "#{file} #{commit_message}"
   puts "committing: #{msg}"
-  `git commit -m "#{msg}"`
+  `git commit -m '#{msg}'`
 end
