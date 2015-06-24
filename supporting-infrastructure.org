@@ -132,8 +132,10 @@ VBoxManage startvm mavericks-test
 VBoxManage controlvm mavericks-test poweroff
 #+END_SRC
 ** Integration Testing VM Setup
-integration test:
-#+BEGIN_SRC ruby :tangle ./integration-test.rb :shebang "#!/usr/bin/env ruby"
+integration testing: since this is old/brokenish, we'll didsable
+tangling for now
+:tangle ./integration-test.rb
+#+BEGIN_SRC ruby :shebang "#!/usr/bin/env ruby"
 
   def use_branch
     ARGV[0] || "master"

@@ -1,0 +1,16 @@
+For anything that doesn't really fit anywhere else:
+
+
+on mac command R + power to restore machine to fresh from factory
+
+
+notes on using a git repo for home dir
+
+git init
+git remote add origin PATH/TO/REPO
+git fetch
+git checkout -t origin/master
+git branch -d origin/master
+git reset --mixed origin/master
+git branch --set-upstream-to origin/master
+
