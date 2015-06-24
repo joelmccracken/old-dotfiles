@@ -3,32 +3,36 @@
 #+TITLE: Joel's Personal Configuration Management Setup
 * Introduction
   This project contains the code and resources to set up and configure
-  a workstation in the way I want it.
+  my workstation.
 
   Overall, this serves two purposes. One is to have comfortable
   control over my workstation, which is something that causes me
-  stress again and again. I actually stop improving my computing setup
-  because I have experienced the need to move from one setup to
-  another and having things break.
+  stress again and again. I have stopped improving my workstation setup
+  because I have felt the fragility -- and non-portability -- of
+  having a system full of hacks.
 
   The other reason really is a question I am trying to answer: Can I
-  build a system that I feel secure with? I personally have nothing to
-  hide, but it bothers me that my information is insecure.
+  build a system with which I feel secure? Can I have a computer that
+  I think is reasonably safe and secure?
 
-  The overall steps to configure a system:
-  1. Acquire this code.
-  2. Acquire the data bag secret key.
-  3. Install chef with the omnibus installer.
-  4. Run Chef.
-  5. Restore (other?) private data (???).
+  I personally have nothing to hide, but it bothers me that my
+  information is insecure.
 * Project Infrastructure
   This project requires lots of meta-infrastructure that is not
   related to my day-to-day computer usage. See the file
   [[file:supporting-infrastructure.org][supporting infrastructure]] for the details of all of this.
   Highlights include:
   - Creating a Mavericks VM for testing
-* Installation and Setup
-** Acquire the Project Code
+* Set up
+** High level overview
+   The overall steps to configure a system:
+   1. Acquire this code.
+   2. Acquire the data bag secret key.
+   3. Install chef with the omnibus installer.
+   4. Run Chef.
+   5. Restore (other?) private data (???).
+** Steps
+*** Acquire the Project Code
 To download this project:
 #+BEGIN_SRC
   curl -LO https://raw.githubusercontent.com/joelmccracken/dotfiles/master/download.sh
@@ -73,36 +77,36 @@ The source for that install script:
 
   echo Done! You are now ready to run the chef installer.
 #+END_SRC
-** Acquire the Databag Secret Key
+*** Acquire the Databag Secret Key
 The databag secret key allows you to unencrypt some information
 stored in this repository. Eventually, this key should go into:
 ~\~/var/secrets/encrypted_data_bag_secret~, but at first it can
 go anywhere, and can thus be specified via the environment variable
 ~EDB_SECRET~. I am assuming that the secret file is initially at
 ~\~/encrypted_data_bag_secret~, and examples will reflect that.
-** Run the Chef Installer
-   Run ~./bin/install-chef-standalone.sh~.
-   This will run the ominbus installer and install Chef.
-** Run Chef
-   The following command runs chef and converges the system.
-  #+BEGIN_SRC
-   EDB_SECRET=~/encrypted_data_bag_secret bin/converge
-  #+END_SRC
-** Final Steps
-   Assuming all of the above steps worked correctly, the system should
-   be set.
-   All that needs to happen now is to restore any working data,
-   projects, etc.
+*** Run the Chef Installer
+    Run ~./bin/install-chef-standalone.sh~.
+    This will run the ominbus installer and install Chef.
+*** Run Chef
+    The following command runs chef and converges the system.
+   #+BEGIN_SRC
+    EDB_SECRET=~/encrypted_data_bag_secret bin/converge
+   #+END_SRC
+*** Final Steps
+    Assuming all of the above steps worked correctly, the system should
+    be set.
+    All that needs to happen now is to restore any working data,
+    projects, etc.
 
-   Remove the encrypted data bag secret from its original location.
-   It should now be moved to its final destination in ~\~/var/secrets~.
+    Remove the encrypted data bag secret from its original location.
+    It should now be moved to its final destination in ~\~/var/secrets~.
 
 * Things that need to be done
 ** break this huge project into phases/pieces
 
 Restore existing backup functionality
 Restore rsync
-Restore gem backup
+Restore backup gem functionality
 
 Clean up integration test code things. It's all broken. :(
 
