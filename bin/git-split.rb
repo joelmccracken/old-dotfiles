@@ -12,8 +12,11 @@ files = `git status -s`
         .split("\n")
         .map { |x|
           m = x.match(/[\s]*([\w]*)[\s](.*)/)
-          if m[1] != "M"
-            raise "Encountered a file I didn't know what to do with in #{m.inspect}"
+          case m[1]
+          when "M" then true
+          when "D" then true
+          when "" then true
+          else raise "Encountered a file I didn't know what to do with in #{m.inspect}"
           end
           m[2]
         }
