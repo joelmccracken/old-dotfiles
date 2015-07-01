@@ -1,0 +1,6 @@
+* Dir structure ideas:
+  ~bin
+  ~apps(?lib?)
+  ~var
+  ~config (~etc?~)
+
