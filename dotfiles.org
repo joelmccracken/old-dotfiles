@@ -1,6 +1,8 @@
 #+PROPERTY: header-args :mkdirp yes
 #+STARTUP: showall
 #+TITLE: Joel's Personal Configuration Management Setup
+* TL;DR
+  - ~bin/converge~ to converge the system.
 * Introduction
   This project contains the code and resources to set up and configure
   my workstation.
