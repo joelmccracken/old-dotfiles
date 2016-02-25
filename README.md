@@ -1,4 +1,3 @@
-
 # Dotfiles
 
 Configuration management system for my (Joel McCracken) personal
