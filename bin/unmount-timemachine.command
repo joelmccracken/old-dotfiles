@@ -40,9 +40,11 @@ end
   else
     unmount
     display_done_notification
-    exit!
+    exit 0
   end
 
 end
 
 display_quitting_notification
+
+exit 0
