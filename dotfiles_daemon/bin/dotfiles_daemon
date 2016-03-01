@@ -1,8 +1,0 @@
-#!/usr/bin/env ruby
-#
-# Stub executable for dotfiles_daemon
-#
-
-require File.expand_path('../../config/environment',  __FILE__)
-
-DaemonKit::Application.exec( DAEMON_ROOT + '/libexec/dotfiles_daemon-daemon.rb' )

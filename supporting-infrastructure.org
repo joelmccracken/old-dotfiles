@@ -216,4 +216,3 @@ tangling for now
 - ~VBoxManage modifyvm yosemite-test --natpf1 "guestssh,tcp,,3333,,22"~
 - ~VBoxManage export yosemite-test -o ~/Documents/yosemite-base-ssh-enabled.ovf~
 - ~tar cvf yosemite-base-ssh-enabled.ova yosemite-base-ssh-enabled.ovf yosemite-base-ssh-enabled-disk1.vmdk~
-
